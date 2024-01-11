@@ -36,7 +36,70 @@ Garrett Grolemund - Recommended reference for those new to R.
 
 ### Software
 
+We will make extensive use of [R](http://r-project.org), an open source
+statistics program and language, however some assignments *may* be
+completed in Python. Be sure to [install R](http://cran.r-project.org/)
+and [RStudio](http://rstudio.com) on your own computers within the first
+few days of the class.
+
+- R - download for
+  [Windows](http://cran.r-project.org/bin/windows/base/),
+  [Mac](http://cran.r-project.org/bin/macosx/), or
+  [Linux](https://cran.r-project.org).
+- RStudio - [Download Windows, Mac, or Linux versions from
+  here](https://rstudio.com/products/rstudio/download/#download)
+
+If using Windows, you also need to download
+[RTools](http://cran.r-project.org/bin/windows/Rtools/).
+
+[LaTeX](https://www.latex-project.org/) is a typesetting language for
+preparing documents. Documents are written in plain text files.
+Formatting the document is done using specific markup. If you have used
+HTML, the framework is similar however instead of using `<TAG></TAG>`
+syntax, LaTeX uses `\TAG{}` format. We will primarily use
+[Markdown](https://daringfireball.net/projects/markdown/), and its
+extension [R Markdown](https://rmarkdown.rstudio.com/) for preparing
+documents in this class. However, when preparing PDF documents, the
+Markdown will first be converted to LaTeX before creating the PDF file.
+As such, a LaTeX converter is necessary. There are LaTeX installers for
+[Windows (MiKTeX)](http://miktex.org/) and [Mac
+(BasicTeX)](http://www.tug.org/mactex/morepackages.html). Alternatively,
+the [`tinytex`](https://yihui.name/tinytex/) R package provides an
+easier way of installing LaTeX directly from within R:
+
+    install.packages('tinytex')
+    tinytex::install_tinytex()
+
+The following command will install a core set of packages we will use
+during the semester. This only needs to be run once per R installation.
+
+    install.packages(c('openintro','devtools','tidyverse', 'ggplot2',
+                       'psych','reshape2','knitr','markdown','shiny','R.rsp',
+                       'fivethirtyeight'))
+    remotes::install_github("jbryer/brickset")
+
 ### Assignments and Grading
+
+You will be assessed using a variety of methods, namely:
+
+**Labs** (30%) - Labs are designed to provide you an opportunity to
+apply statistical concepts using statistical software.
+
+**Textbook questions** (15%) - The assigned questions from the textbook
+provide an opportunity to assess conceptional understandings.
+
+**Participation** (10%) - You are expected to attend every class and to
+complete a one minute paper at the conclusion of class.
+
+**Poster** (25%) - We will hold a poster session on the second to last
+class. In a group of 2 to 3 students will create poster presenting the
+results of analysis using a data set of your choice. More details will
+be provided a few weeks into the class.
+
+**Final exam** (20%) - A multiple choice exam will be given on the last
+day of class.
+
+The following grading scale will be used for this class.
 
 | Quality of Performance                     | Letter | Grade Range (%) | GPA/Quality Points |
 |--------------------------------------------|--------|-----------------|--------------------|
