@@ -89,7 +89,8 @@ apply statistical concepts using statistical software.
 provide an opportunity to assess conceptional understandings.
 
 **Participation** (10%) - You are expected to attend every class and to
-complete a one minute paper at the conclusion of class.
+complete a [one minute paper](https://forms.gle/CD5Qxkq3xtdxSheW8) at
+the conclusion of class.
 
 **Poster** (25%) - We will hold a poster session on the second to last
 class. In a group of 2 to 3 students will create poster presenting the
@@ -154,6 +155,8 @@ IMStat Chapter 1
 </td>
 <td style="text-align:left;">
 <p>
+<a href="https://forms.gle/PJZSMSYQsjYAAvY27">Formative
+Assessment</a><br />
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/01_intro_to_r.zip">Intro
 to R Lab</a>
 </p>
@@ -454,7 +457,7 @@ student’s own. Evidence to the contrary will result in appropriate
 penalties. For more information, visit
 <http://yu.edu/registrar/grad-catalog/Links> to an external site.
 
-#### STUDENT SUPPORT SERVICES
+#### Student Support Services
 
 If you need any additional help, please visit Student Support Services
 at <http://yu.edu/academics/services/Links> to an external site..
