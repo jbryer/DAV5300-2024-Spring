@@ -25,12 +25,14 @@ warrant missing class, please discuss with me as soon as possible.
 
 ### Textbooks
 
-*Introduction to Modern Statistics* by Mine Çetinkaya-Rundel and Johanna
-Hardin freely available at: - This will be the primary textbook.
+[*Introduction to Modern Statistics*](materials/imstat.pdf) by Mine
+Çetinkaya-Rundel and Johanna Hardin - This will be the primary textbook.
 
-*R for Data Science* by Hadley Wickham and Garrett Grolemund freely
-available at: <https://r4ds.had.co.nz> - Recommended reference for those
-new to R.
+[*R for Data Science*](https://r4ds.had.co.nz) by Hadley Wickham and
+Garrett Grolemund - Recommended reference for those new to R.
+
+[*OpenIntro Statistics*](materials/os4.pdf) by David Diaz, Mine
+Çetinkaya-Rundel, and Christopher D Barr.
 
 ### Software
 
