@@ -150,7 +150,8 @@ Introduction to R, Rstudio, and the course
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapter 1
+IMStat <a href="https://openintro-ims.netlify.app/data-hello">Chapter
+1</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -174,7 +175,9 @@ Introduction to Data
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapters 2 and 3
+IMStat Chapters
+<a href="https://openintro-ims.netlify.app/data-design">2</a> and
+<a href="https://openintro-ims.netlify.app/data-applications">3</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -196,7 +199,8 @@ Data Visualization
 </td>
 <td style="text-align:left;">
 <p>
-\[R4DS Chapter 3\[(<https://r4ds.had.co.nz/data-visualisation.html>)
+R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
+3</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -214,7 +218,8 @@ Bivariate Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapter 7
+IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
+7</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -236,7 +241,8 @@ Multiple Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapter 8
+IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
+8</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -258,7 +264,8 @@ Maximum Likelihood Estimation and Logistic Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapter 9
+IMStat
+<a href="https://openintro-ims.netlify.app/model-logistic">Chapter 9</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -312,7 +319,10 @@ Inference for Categorical Data
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapters 16, 17, and 18
+IMStat Chapters
+<a href="https://openintro-ims.netlify.app/inference-one-prop">16</a>,
+<a href="https://openintro-ims.netlify.app/inference-two-props">17</a>,
+and <a href="https://openintro-ims.netlify.app/inference-tables">18</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -330,7 +340,11 @@ Inference for Numerical Data
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapters 19, 20, and 21
+IMStat Chapters
+<a href="https://openintro-ims.netlify.app/inference-one-mean">19</a>,
+<a href="https://openintro-ims.netlify.app/inference-two-means">20</a>,
+and
+<a href="https://openintro-ims.netlify.app/inference-paired-means">21</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -348,7 +362,9 @@ ANOVA
 </td>
 <td style="text-align:left;">
 <p>
-IMStat Chapter 22
+IMStat
+<a href="https://openintro-ims.netlify.app/inference-many-means">Chapter
+22</a>
 </p>
 </td>
 <td style="text-align:left;">
