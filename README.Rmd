@@ -1,0 +1,75 @@
+---
+output: github_document
+md_extensions:
+  self_contained: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## DAV 5300 Computational Mathematics and Statistics - Spring 2023
+
+**Instructor:** Jason Bryer, Ph.D. [jason@bryer.org](mailto:jason@bryer.org)  
+**Meeting Time:** Tuesdays 5:30pm to 7:30pm  
+**Office Hours:** Before and after class and online by appointment  
+**Teaching Assistant:** Dengyi Liu  
+
+### Course Overview
+
+Deeper math literacy and computational thinking are essential for deeper data literacy. Probability, statistics, and mathematics—especially fundamental linear algebra—are critical to the success of data analysts as they implement increasingly complex solutions. This course is designed to give the non-mathematician practice using mathematical and statistical computational methods in the service of data analytic solutions.
+
+### Attendance
+
+You are expected to attend class to learn the material for the course. Attendance will be recorded for each session. While one absence will not be a problem, several absences will be. That said, if your circumstances warrant missing class, please discuss with me as soon as possible.
+
+### Textbooks
+
+*Introduction to Modern Statistics* by Mine Çetinkaya-Rundel and Johanna Hardin freely available at:  - This will be the primary textbook.
+
+*R for Data Science* by Hadley Wickham and Garrett Grolemund freely available at: https://r4ds.had.co.nz - Recommended reference for those new to R.
+
+### Software
+
+### Assignments and Grading
+
+
+| Quality of Performance                     | Letter | Grade Range (%) | GPA/Quality Points |
+|--------------------------------------------|--------|-----------------|--------------------|
+| Excellent - work is of exceptional quality | A.     | 93 – 100.       | 4.0                |
+|                                            | A.     | 90 – 92.9.      | 3.7                |
+| Good - work is above average               | B+.    | 87 – 89.9.      | 3.3                |
+| Satisfactory                               | B      | 83 – 86.9       | 3.0                |
+| Below Average                              | B-     | 80 – 82.9       | 2.7                |
+| Poor                                       | C+     | 77 – 79.9       | 2.3                |
+|                                            | C      | 70 – 76.9       | 2.0                |
+| Failure                                    | F      | < 70            | 0.0                |
+
+
+### Schedule
+
+*Tentative and subject to change*
+
+```{r, echo=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+schedule <- readxl::read_excel('Schedule.xlsx', sheet = 2) |>
+	dplyr::select(!Link) |> 
+	tidyr::replace_na(list(Assignments = '', Readings = ''))
+schedule$Readings <- sapply(schedule$Readings, markdown::mark) |> unname()
+schedule$Assignments <- sapply(schedule$Assignments, markdown::mark) |> unname()
+knitr::kable(schedule, format = 'html', escape = FALSE)
+```
+
+
+### University Policies and Resources
+
+#### Accessibility and Accomodations
+
+The Office of Disability Services collaborates with students, faculty, and staff to provide reasonable accommodations and services to students with disabilities. Students with disabilities who are enrolled in this course and who will be requesting documented disability-related accommodations should make an appointment with the Office of Disability Services, during the first week of class. Once you have been approved for accommodations, please submit your accommodation letter to ensure the successful implementation of those accommodations. For more information, please visit http://yu.edu/Student-Life/Resources-and-Services/Disability-Services/Links to an
+external site.
+
+#### Academic Integrity
+
+The submission by a student of any examination, course assignment, or degree requirement is assumed to guarantee that the thoughts and expressions therein not expressly credited to another are literally the student’s own. Evidence to the contrary will result in appropriate penalties. For more information, visit http://yu.edu/registrar/grad-catalog/Links to an external site.
+
+#### STUDENT SUPPORT SERVICES
+
+If you need any additional help, please visit Student Support Services at http://yu.edu/academics/services/Links to an external site..
