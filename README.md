@@ -1,7 +1,7 @@
 
 ## DAV 5300 Computational Mathematics and Statistics - Spring 2023
 
-**Instructor:** Jason Bryer, Ph.D. <jason@bryer.org>  
+**Instructor:** Jason Bryer, Ph.D. <jason.bryer@ye.edu>  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  
 **Office Hours:** Before and after class and online by appointment  
 **Teaching Assistant:** Dengyi Liu
@@ -28,7 +28,7 @@ warrant missing class, please discuss with me as soon as possible.
 [*Introduction to Modern Statistics*](materials/imstat.pdf) by Mine
 Çetinkaya-Rundel and Johanna Hardin - This will be the primary textbook.
 
-[*R for Data Science*](https://r4ds.had.co.nz) by Hadley Wickham and
+[*R for Data Science*](https://r4ds.hadley.nz) by Hadley Wickham and
 Garrett Grolemund - Recommended reference for those new to R.
 
 [*OpenIntro Statistics*](materials/os4.pdf) by David Diaz, Mine
@@ -100,6 +100,10 @@ be provided a few weeks into the class.
 **Final exam** (20%) - A multiple choice exam will be given on the last
 day of class.
 
+**All assignments are due on Sunday.** Assignments submitted late will
+be penalized. Assignments will not be accepted more than one week after
+their due date.
+
 The following grading scale will be used for this class.
 
 | Quality of Performance                     | Letter | Grade Range (%) | GPA/Quality Points |
@@ -120,6 +124,9 @@ The following grading scale will be used for this class.
 <table>
 <thead>
 <tr>
+<th style="text-align:right;">
+Week
+</th>
 <th style="text-align:left;">
 Start
 </th>
@@ -139,6 +146,9 @@ Assignments
 </thead>
 <tbody>
 <tr>
+<td style="text-align:right;">
+1
+</td>
 <td style="text-align:left;">
 2024-01-16
 </td>
@@ -164,6 +174,9 @@ to R Lab</a>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+2
+</td>
 <td style="text-align:left;">
 2024-01-22
 </td>
@@ -183,11 +196,14 @@ IMStat Chapters
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/02_intro_to_data.zip">Intro
-to Data Lab</a>
+to Data Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+3
+</td>
 <td style="text-align:left;">
 2024-01-29
 </td>
@@ -207,6 +223,9 @@ R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+4
+</td>
 <td style="text-align:left;">
 2024-02-05
 </td>
@@ -214,22 +233,23 @@ R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
 2024-02-18
 </td>
 <td style="text-align:left;">
-Bivariate Regression
+Probability
 </td>
 <td style="text-align:left;">
 <p>
-IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
-7</a>
+OI Chapter 3
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_simple_regression.zip">Regression
-Lab</a>
+Probability Lab<br /> Homework: TBD
 </p>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+5
+</td>
 <td style="text-align:left;">
 2024-02-11
 </td>
@@ -248,11 +268,14 @@ IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_multiple_regression.zip">Multiple
-Regression Lab</a>
+Regression Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+6
+</td>
 <td style="text-align:left;">
 2024-02-19
 </td>
@@ -269,9 +292,15 @@ IMStat
 </p>
 </td>
 <td style="text-align:left;">
+<p>
+Logistic Regression Lab Homework: TBD
+</p>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+7
+</td>
 <td style="text-align:left;">
 2024-02-26
 </td>
@@ -279,20 +308,25 @@ IMStat
 2024-03-03
 </td>
 <td style="text-align:left;">
-Probability
+Bivariate Regression
 </td>
 <td style="text-align:left;">
 <p>
-OI Chapter 3
+IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
+7</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-Probability Lab
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_simple_regression.zip">Regression
+Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+8
+</td>
 <td style="text-align:left;">
 2024-03-04
 </td>
@@ -308,6 +342,9 @@ Foundation for Inference / Central Limit Theorem
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+9
+</td>
 <td style="text-align:left;">
 2024-03-11
 </td>
@@ -329,6 +366,9 @@ and <a href="https://openintro-ims.netlify.app/inference-tables">18</a>
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+10
+</td>
 <td style="text-align:left;">
 2024-03-18
 </td>
@@ -351,6 +391,9 @@ and
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+11
+</td>
 <td style="text-align:left;">
 2024-03-25
 </td>
@@ -371,6 +414,9 @@ IMStat
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+12
+</td>
 <td style="text-align:left;">
 2024-04-01
 </td>
@@ -386,6 +432,9 @@ Introduction to Predictive Modeling
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+13
+</td>
 <td style="text-align:left;">
 2024-04-08
 </td>
@@ -401,6 +450,9 @@ Bayesian Analysis
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+14
+</td>
 <td style="text-align:left;">
 2024-04-15
 </td>
@@ -416,6 +468,8 @@ Poster Session
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+</td>
 <td style="text-align:left;">
 2024-04-22
 </td>
@@ -431,6 +485,9 @@ Passover Recess
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+15
+</td>
 <td style="text-align:left;">
 2024-05-01
 </td>

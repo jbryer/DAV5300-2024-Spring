@@ -8,7 +8,7 @@ editor_options:
 
 ## DAV 5300 Computational Mathematics and Statistics - Spring 2023
 
-**Instructor:** Jason Bryer, Ph.D. [jason@bryer.org](mailto:jason@bryer.org)  
+**Instructor:** Jason Bryer, Ph.D. [jason.bryer@ye.edu](mailto:jason.bryer@ye.edu)  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  
 **Office Hours:** Before and after class and online by appointment  
 **Teaching Assistant:** Dengyi Liu  
@@ -25,7 +25,7 @@ You are expected to attend class to learn the material for the course. Attendanc
 
 [*Introduction to Modern Statistics*](materials/imstat.pdf) by Mine Çetinkaya-Rundel and Johanna Hardin - This will be the primary textbook.
 
-[*R for Data Science*](https://r4ds.had.co.nz) by Hadley Wickham and Garrett Grolemund - Recommended reference for those new to R.
+[*R for Data Science*](https://r4ds.hadley.nz) by Hadley Wickham and Garrett Grolemund - Recommended reference for those new to R.
 
 [*OpenIntro Statistics*](materials/os4.pdf) by David Diaz, Mine Çetinkaya-Rundel, and Christopher D Barr.
 
@@ -69,6 +69,7 @@ You will be assessed using a variety of methods, namely:
 
 **Final exam** (20%) - A multiple choice exam will be given on the last day of class.
 
+**All assignments are due on Sunday.** Assignments submitted late will be penalized. Assignments will not be accepted more than one week after their due date.
 
 The following grading scale will be used for this class.
 
