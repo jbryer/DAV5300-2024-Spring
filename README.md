@@ -1,5 +1,5 @@
 
-## DAV 5300 Computational Mathematics and Statistics - Spring 2023
+## DAV 5300 Computational Mathematics and Statistics - Spring 2024
 
 **Instructor:** Jason Bryer, Ph.D. <jason.bryer@ye.edu>  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  

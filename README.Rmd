@@ -1,12 +1,13 @@
 ---
 output: github_document
+# output: html_document
 md_extensions:
   self_contained: true
 editor_options: 
   chunk_output_type: console
 ---
 
-## DAV 5300 Computational Mathematics and Statistics - Spring 2023
+## DAV 5300 Computational Mathematics and Statistics - Spring 2024
 
 **Instructor:** Jason Bryer, Ph.D. [jason.bryer@ye.edu](mailto:jason.bryer@ye.edu)  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  
