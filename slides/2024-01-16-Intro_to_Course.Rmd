@@ -178,6 +178,7 @@ schedule <- rbind(meetups[,c('day', 'label', 'color', 'fill')],
 topics <- read_excel('../Schedule.xlsx', sheet = 'Schedule')
 topics$Start <- as.Date(topics$Start)
 topics$End <- as.Date(topics$End)
+# topics$Topic <- sapply(topics$Topic, markdown::mark) |> unname()
 for(i in 1:nrow(topics)) {
 	schedule <- rbind(schedule, data.frame(
 		day = topics[i,]$Start,
@@ -204,7 +205,7 @@ end_day <- lubridate::ceiling_date(max(meetups$day), "month") - 1
 topics$Start <- format(topics$Start, format = '%A, %B %d, %Y')
 topics$End <- format(topics$End, format = '%A, %B %d, %Y')
 # topics <- topics %>% filter(!is.na(Link)) %>% select(-Link)
-knitr::kable(topics[,c('Week', 'Start','End','Topic')], format = 'html')
+knitr::kable(topics[,c('Week', 'Start','End','Topic')], format = 'html', escape = FALSE)
 ```
 
 ---

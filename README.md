@@ -137,6 +137,9 @@ End
 Topic
 </th>
 <th style="text-align:left;">
+Link
+</th>
+<th style="text-align:left;">
 Readings
 </th>
 <th style="text-align:left;">
@@ -156,10 +159,11 @@ Assignments
 2024-01-21
 </td>
 <td style="text-align:left;">
-<p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-16-Intro_to_Course.pdf">Introduction
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-16-Intro_to_Course.pdf'>Introduction
 to R, Rstudio, and the course</a>
-</p>
+</td>
+<td style="text-align:left;">
+<https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-16-Intro_to_Course.pdf>
 </td>
 <td style="text-align:left;">
 <p>
@@ -187,9 +191,9 @@ to R Lab</a>
 2024-01-28
 </td>
 <td style="text-align:left;">
-<p>
 Introduction to Data
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -216,9 +220,9 @@ to Data Lab</a><br /> Homework: TBD
 2024-02-04
 </td>
 <td style="text-align:left;">
-<p>
 Data Visualization
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -240,9 +244,9 @@ R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
 2024-02-18
 </td>
 <td style="text-align:left;">
-<p>
 Probability
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -266,9 +270,9 @@ Probability Lab<br /> Homework: TBD
 2024-02-18
 </td>
 <td style="text-align:left;">
-<p>
 Multiple Regression
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -294,9 +298,9 @@ Regression Lab</a><br /> Homework: TBD
 2024-02-25
 </td>
 <td style="text-align:left;">
-<p>
 Maximum Likelihood Estimation and Logistic Regression
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -321,9 +325,9 @@ Logistic Regression Lab Homework: TBD
 2024-03-03
 </td>
 <td style="text-align:left;">
-<p>
 Bivariate Regression
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -349,9 +353,9 @@ Lab</a><br /> Homework: TBD
 2024-03-10
 </td>
 <td style="text-align:left;">
-<p>
 Foundation for Inference / Central Limit Theorem
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -369,9 +373,9 @@ Foundation for Inference / Central Limit Theorem
 2024-03-17
 </td>
 <td style="text-align:left;">
-<p>
 Inference for Categorical Data
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -395,9 +399,9 @@ and <a href="https://openintro-ims.netlify.app/inference-tables">18</a>
 2024-03-24
 </td>
 <td style="text-align:left;">
-<p>
 Inference for Numerical Data
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -422,9 +426,9 @@ and
 2024-03-31
 </td>
 <td style="text-align:left;">
-<p>
 ANOVA
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 <p>
@@ -447,9 +451,9 @@ IMStat
 2024-04-07
 </td>
 <td style="text-align:left;">
-<p>
 Introduction to Predictive Modeling
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -467,9 +471,9 @@ Introduction to Predictive Modeling
 2024-04-14
 </td>
 <td style="text-align:left;">
-<p>
 Bayesian Analysis
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -487,9 +491,9 @@ Bayesian Analysis
 2024-04-21
 </td>
 <td style="text-align:left;">
-<p>
 Poster Session
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -506,9 +510,9 @@ Poster Session
 2024-04-30
 </td>
 <td style="text-align:left;">
-<p>
 Passover Recess
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -526,9 +530,9 @@ Passover Recess
 2024-05-07
 </td>
 <td style="text-align:left;">
-<p>
 Final Exam
-</p>
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>

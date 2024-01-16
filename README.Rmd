@@ -93,9 +93,15 @@ The following grading scale will be used for this class.
 ```{r, echo=FALSE, results='asis'}
 options(knitr.kable.NA = '')
 schedule <- readxl::read_excel('Schedule.xlsx', sheet = 2) |>
-	dplyr::select(!Link) |> 
+	# dplyr::select(!Link) |> 
 	tidyr::replace_na(list(Assignments = '', Readings = ''))
-schedule$Topic <- sapply(schedule$Topic, markdown::mark) |> unname()
+
+links <- which(!is.na(schedule$Link))
+if(length(links) > 0) {
+	schedule[links,]$Topic <- paste0("<a href='", schedule[links,]$Link, "'>",
+									 schedule[links,]$Topic, "</a>")
+}
+# schedule$Topic <- sapply(schedule$Topic, markdown::mark) |> unname()
 schedule$Readings <- sapply(schedule$Readings, markdown::mark) |> unname()
 schedule$Assignments <- sapply(schedule$Assignments, markdown::mark) |> unname()
 knitr::kable(schedule, format = 'html', escape = FALSE)
