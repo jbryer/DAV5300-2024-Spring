@@ -205,7 +205,7 @@ IMStat Chapters
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/02_intro_to_data.zip">Intro
-to Data Lab</a><br /> Homework: TBD
+to Data Lab</a><br /> Homework: 1.4, 1.10, 2.4, 2.16, 2.24
 </p>
 </td>
 </tr>
