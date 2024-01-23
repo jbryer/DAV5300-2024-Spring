@@ -82,10 +82,10 @@ during the semester. This only needs to be run once per R installation.
 
 You will be assessed using a variety of methods, namely:
 
-**Labs** (30%) - Labs are designed to provide you an opportunity to
+**Labs** (36%) - Labs are designed to provide you an opportunity to
 apply statistical concepts using statistical software.
 
-**Textbook questions** (15%) - The assigned questions from the textbook
+**Textbook questions** (14%) - The assigned questions from the textbook
 provide an opportunity to assess conceptional understandings. Questions
 are from the *Exercises* section at the end of each chapter.
 
@@ -93,7 +93,7 @@ are from the *Exercises* section at the end of each chapter.
 complete a [one minute paper](https://forms.gle/CD5Qxkq3xtdxSheW8) at
 the conclusion of class.
 
-**Poster** (25%) - We will hold a poster session on the second to last
+**Poster** (20%) - We will hold a poster session on the second to last
 class. In a group of 2 to 3 students will create poster presenting the
 results of analysis using a data set of your choice. More details will
 be provided a few weeks into the class.
