@@ -4,7 +4,7 @@
 **Instructor:** Jason Bryer, Ph.D. <jason.bryer@ye.edu>  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  
 **Office Hours:** Before and after class and online by appointment  
-**Teaching Assistant:** Dengyi Liu
+**Teaching Assistant:** Dengyi Liu <dliu6@mail.yu.edu>
 
 ### Course Overview
 
@@ -86,7 +86,8 @@ You will be assessed using a variety of methods, namely:
 apply statistical concepts using statistical software.
 
 **Textbook questions** (15%) - The assigned questions from the textbook
-provide an opportunity to assess conceptional understandings.
+provide an opportunity to assess conceptional understandings. Questions
+are from the *Exercises* section at the end of each chapter.
 
 **Participation** (10%) - You are expected to attend every class and to
 complete a [one minute paper](https://forms.gle/CD5Qxkq3xtdxSheW8) at
@@ -137,9 +138,6 @@ End
 Topic
 </th>
 <th style="text-align:left;">
-Link
-</th>
-<th style="text-align:left;">
 Readings
 </th>
 <th style="text-align:left;">
@@ -161,9 +159,6 @@ Assignments
 <td style="text-align:left;">
 <a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-16-Intro_to_Course.pdf'>Introduction
 to R, Rstudio, and the course</a>
-</td>
-<td style="text-align:left;">
-<https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-16-Intro_to_Course.pdf>
 </td>
 <td style="text-align:left;">
 <p>
@@ -191,15 +186,15 @@ to R Lab</a>
 2024-01-28
 </td>
 <td style="text-align:left;">
-Introduction to Data
-</td>
-<td style="text-align:left;">
+Introduction to Data and Data Visualization
 </td>
 <td style="text-align:left;">
 <p>
 IMStat Chapters
 <a href="https://openintro-ims.netlify.app/data-design">2</a> and
-<a href="https://openintro-ims.netlify.app/data-applications">3</a>
+<a href="https://openintro-ims.netlify.app/data-applications">3</a><br />
+R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
+3</a>
 </p>
 </td>
 <td style="text-align:left;">
@@ -220,15 +215,8 @@ to Data Lab</a><br /> Homework: 1.4, 1.10, 2.4, 2.16, 2.24
 2024-02-04
 </td>
 <td style="text-align:left;">
-Data Visualization
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-<p>
-R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
-3</a>
-</p>
 </td>
 <td style="text-align:left;">
 </td>
@@ -247,15 +235,14 @@ R4DS <a href="https://r4ds.had.co.nz/data-visualisation.html">Chapter
 Probability
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
 <p>
 OI Chapter 3
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-Probability Lab<br /> Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/03_probability.zip">Probability
+Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
@@ -270,20 +257,18 @@ Probability Lab<br /> Homework: TBD
 2024-02-18
 </td>
 <td style="text-align:left;">
-Multiple Regression
-</td>
-<td style="text-align:left;">
+Bivariate Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
-8</a>
+IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
+7</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_multiple_regression.zip">Multiple
-Regression Lab</a><br /> Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/07_simple_linear_regression.zip">Regression
+Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
@@ -298,19 +283,18 @@ Regression Lab</a><br /> Homework: TBD
 2024-02-25
 </td>
 <td style="text-align:left;">
-Maximum Likelihood Estimation and Logistic Regression
-</td>
-<td style="text-align:left;">
+Multiple Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat
-<a href="https://openintro-ims.netlify.app/model-logistic">Chapter 9</a>
+IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
+8</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-Logistic Regression Lab Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_multiple_regression.zip">Multiple
+Regression Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
@@ -325,20 +309,17 @@ Logistic Regression Lab Homework: TBD
 2024-03-03
 </td>
 <td style="text-align:left;">
-Bivariate Regression
-</td>
-<td style="text-align:left;">
+Maximum Likelihood Estimation and Logistic Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
-7</a>
+IMStat
+<a href="https://openintro-ims.netlify.app/model-logistic">Chapter 9</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_simple_regression.zip">Regression
-Lab</a><br /> Homework: TBD
+Logistic Regression Lab Homework: TBD
 </p>
 </td>
 </tr>
@@ -356,10 +337,19 @@ Lab</a><br /> Homework: TBD
 Foundation for Inference / Central Limit Theorem
 </td>
 <td style="text-align:left;">
+<p>
+IMStat Chapters
+<a href="https://openintro-ims.netlify.app/foundations-randomization">11</a>,
+<a href="https://openintro-ims.netlify.app/foundations-bootstrapping">12</a>,
+and
+<a href="https://openintro-ims.netlify.app/foundations-mathematical">13</a>
+</p>
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
+<p>
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/11_foundations_for_inference.zip">Foundation
+for Inference Lab</a> (<em>note there are two parts</em>)
+</p>
 </td>
 </tr>
 <tr>
@@ -376,8 +366,6 @@ Foundation for Inference / Central Limit Theorem
 Inference for Categorical Data
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
 <p>
 IMStat Chapters
 <a href="https://openintro-ims.netlify.app/inference-one-prop">16</a>,
@@ -386,6 +374,10 @@ and <a href="https://openintro-ims.netlify.app/inference-tables">18</a>
 </p>
 </td>
 <td style="text-align:left;">
+<p>
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/16_inference_for_categorial_data.zip">Inference
+for Categorical Data Lab</a>
+</p>
 </td>
 </tr>
 <tr>
@@ -402,8 +394,6 @@ and <a href="https://openintro-ims.netlify.app/inference-tables">18</a>
 Inference for Numerical Data
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
 <p>
 IMStat Chapters
 <a href="https://openintro-ims.netlify.app/inference-one-mean">19</a>,
@@ -413,6 +403,10 @@ and
 </p>
 </td>
 <td style="text-align:left;">
+<p>
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/19_inference_for_numerical_data.zip">Inference
+for Numerical Data Lab</a>
+</p>
 </td>
 </tr>
 <tr>
@@ -429,8 +423,6 @@ and
 ANOVA
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
 <p>
 IMStat
 <a href="https://openintro-ims.netlify.app/inference-many-means">Chapter
@@ -438,6 +430,10 @@ IMStat
 </p>
 </td>
 <td style="text-align:left;">
+<p>
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/22_ANOVA.zip">ANOVA
+Lab</a>
+</p>
 </td>
 </tr>
 <tr>
@@ -452,8 +448,6 @@ IMStat
 </td>
 <td style="text-align:left;">
 Introduction to Predictive Modeling
-</td>
-<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -477,8 +471,6 @@ Bayesian Analysis
 </td>
 <td style="text-align:left;">
 </td>
-<td style="text-align:left;">
-</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -492,8 +484,6 @@ Bayesian Analysis
 </td>
 <td style="text-align:left;">
 Poster Session
-</td>
-<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -516,8 +506,6 @@ Passover Recess
 </td>
 <td style="text-align:left;">
 </td>
-<td style="text-align:left;">
-</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -531,8 +519,6 @@ Passover Recess
 </td>
 <td style="text-align:left;">
 Final Exam
-</td>
-<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>

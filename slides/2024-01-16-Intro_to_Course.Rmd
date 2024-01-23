@@ -866,7 +866,7 @@ Complete the one minute paper: `r one_minute_paper`
 2. What important question remains unanswered for you?
 ]
 .pull-right[
-<img src='images/one_minute_paper.png' alt='One minute paper QR code' />
+<img src='images/one_minute_paper.jpg' alt='One minute paper QR code' />
 ]
 
 ---

@@ -12,7 +12,7 @@ editor_options:
 **Instructor:** Jason Bryer, Ph.D. [jason.bryer@ye.edu](mailto:jason.bryer@ye.edu)  
 **Meeting Time:** Tuesdays 5:30pm to 7:30pm  
 **Office Hours:** Before and after class and online by appointment  
-**Teaching Assistant:** Dengyi Liu  
+**Teaching Assistant:** Dengyi Liu [dliu6@mail.yu.edu](mailto:dliu6@mail.yu.edu)  
 
 ### Course Overview
 
@@ -62,7 +62,7 @@ You will be assessed using a variety of methods, namely:
 
 **Labs** (30%) - Labs are designed to provide you an opportunity to apply statistical concepts using statistical software.
 
-**Textbook questions** (15%) - The assigned questions from the textbook provide an opportunity to assess conceptional understandings.
+**Textbook questions** (15%) - The assigned questions from the textbook provide an opportunity to assess conceptional understandings. Questions are from the *Exercises* section at the end of each chapter.
 
 **Participation** (10%) - You are expected to attend every class and to complete a [one minute paper](https://forms.gle/CD5Qxkq3xtdxSheW8) at the conclusion of class.
 
@@ -104,6 +104,7 @@ if(length(links) > 0) {
 # schedule$Topic <- sapply(schedule$Topic, markdown::mark) |> unname()
 schedule$Readings <- sapply(schedule$Readings, markdown::mark) |> unname()
 schedule$Assignments <- sapply(schedule$Assignments, markdown::mark) |> unname()
+schedule$Link <- NULL
 knitr::kable(schedule, format = 'html', escape = FALSE)
 ```
 

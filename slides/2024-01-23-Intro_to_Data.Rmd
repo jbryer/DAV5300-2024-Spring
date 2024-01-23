@@ -1,8 +1,8 @@
 ---
 title: "Intro to Data"
-subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
-date: "August 30, 2023"
+subtitle: "Computational Mathematics and Statistics"
+author: Jason Bryer, Ph.D.
+date: "January 23, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -44,7 +44,7 @@ class: center, middle, inverse, title-slide
 ```{r, echo = FALSE, cache = TRUE, message = FALSE, warning = FALSE}
 library(googlesheets4)
 
-results <- read_sheet('https://docs.google.com/spreadsheets/d/189ZoZgrK8iqsApRv67IdFAj866yiNblnbtGkwVIXVow/edit?resourcekey#gid=1436273879') %>% as.data.frame()
+results <- read_sheet('https://docs.google.com/spreadsheets/d/1hw5fxvTNYi8lt2JnyXPSOiWSpN0MKcji5nuC7THN2qM/edit#gid=465598735') %>% as.data.frame()
 mass.items <- c('I find math interesting.',
 				'I get uptight during math tests.',
 				'I think that I will use math in the future.',
@@ -413,5 +413,5 @@ Complete the one minute paper: `r one_minute_paper`
 2. What important question remains unanswered for you?
 ]
 .pull-right[
-<img src='images/one_minute_paper.png' alt='One minute paper QR code' />
+<img src='images/one_minute_paper.jpg' alt='One minute paper QR code' />
 ]
