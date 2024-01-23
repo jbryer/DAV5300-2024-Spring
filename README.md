@@ -186,7 +186,8 @@ to R Lab</a>
 2024-01-28
 </td>
 <td style="text-align:left;">
-Introduction to Data and Data Visualization
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-23-Intro_to_Data.pdf'>Introduction
+to Data and Data Visualization</a>
 </td>
 <td style="text-align:left;">
 <p>
@@ -215,23 +216,6 @@ to Data Lab</a><br /> Homework: 1.4, 1.10, 2.4, 2.16, 2.24
 2024-02-04
 </td>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-2024-02-05
-</td>
-<td style="text-align:left;">
-2024-02-18
-</td>
-<td style="text-align:left;">
 Probability
 </td>
 <td style="text-align:left;">
@@ -248,10 +232,10 @@ Lab</a><br /> Homework: TBD
 </tr>
 <tr>
 <td style="text-align:right;">
-5
+4
 </td>
 <td style="text-align:left;">
-2024-02-11
+2024-02-05
 </td>
 <td style="text-align:left;">
 2024-02-18
@@ -274,13 +258,13 @@ Lab</a><br /> Homework: TBD
 </tr>
 <tr>
 <td style="text-align:right;">
-6
+5
 </td>
 <td style="text-align:left;">
-2024-02-19
+2024-02-11
 </td>
 <td style="text-align:left;">
-2024-02-25
+2024-02-18
 </td>
 <td style="text-align:left;">
 Multiple Regression
@@ -300,13 +284,13 @@ Regression Lab</a><br /> Homework: TBD
 </tr>
 <tr>
 <td style="text-align:right;">
-7
+6
 </td>
 <td style="text-align:left;">
-2024-02-26
+2024-02-19
 </td>
 <td style="text-align:left;">
-2024-03-03
+2024-02-25
 </td>
 <td style="text-align:left;">
 Maximum Likelihood Estimation and Logistic Regression
@@ -321,6 +305,24 @@ IMStat
 <p>
 Logistic Regression Lab Homework: TBD
 </p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+2024-02-26
+</td>
+<td style="text-align:left;">
+2024-03-03
+</td>
+<td style="text-align:left;">
+TBD
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
 </td>
 </tr>
 <tr>
