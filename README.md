@@ -226,7 +226,8 @@ OI Chapter 3
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/03_probability.zip">Probability
-Lab</a><br /> Homework: TBD
+Lab</a><br /> Homework (Note these are from the OpenIntro Statistics
+book): 3.7, 3.17, 3.25, 3.33, 3.37
 </p>
 </td>
 </tr>
@@ -303,7 +304,8 @@ IMStat
 </td>
 <td style="text-align:left;">
 <p>
-Logistic Regression Lab Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_logistic_regression.zip">Logistic
+Regression Lab</a> Homework: TBD
 </p>
 </td>
 </tr>
