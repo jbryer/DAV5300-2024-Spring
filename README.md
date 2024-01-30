@@ -320,7 +320,7 @@ Regression Lab</a> Homework: TBD
 2024-03-03
 </td>
 <td style="text-align:left;">
-TBD
+There will be no class on February 27th.
 </td>
 <td style="text-align:left;">
 </td>
