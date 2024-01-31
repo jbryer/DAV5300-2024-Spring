@@ -216,7 +216,7 @@ to Data Lab</a><br /> Homework: 1.4, 1.10, 2.4, 2.16, 2.24
 2024-02-04
 </td>
 <td style="text-align:left;">
-Probability
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-01-30-Probablity.pdf'>Probability</a>
 </td>
 <td style="text-align:left;">
 <p>
