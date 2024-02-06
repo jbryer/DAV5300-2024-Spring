@@ -280,7 +280,7 @@ head(vals, n=10)
 ```
 
 ```
-##  [1] -1 -1  1 -1  1  9 -1 -1 -1 -1
+##  [1] -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 ```
 
 ```r
@@ -288,7 +288,7 @@ mean(vals)
 ```
 
 ```
-## [1] -0.368
+## [1] -0.491
 ```
 ]
 .pull-right[
@@ -373,7 +373,7 @@ mean(runs)
 ```
 
 ```
-## [1] -0.4502
+## [1] -0.4595
 ```
 
 ---
@@ -396,8 +396,8 @@ sample(letters)
 ```
 
 ```
-##  [1] "q" "y" "e" "w" "f" "o" "v" "b" "r" "j" "m" "n" "p" "z" "h" "t" "l" "a" "c"
-## [20] "d" "g" "s" "k" "x" "u" "i"
+##  [1] "c" "n" "t" "u" "j" "r" "m" "f" "y" "g" "b" "p" "k" "w" "l" "d" "i" "s" "z"
+## [20] "v" "a" "q" "x" "e" "o" "h"
 ```
 
 ---
@@ -411,7 +411,7 @@ sample(letters, size = 1)
 ```
 
 ```
-## [1] "d"
+## [1] "j"
 ```
 
 The `replace` will ensure that each randomly selected value is independent of the others.
@@ -422,8 +422,8 @@ sample(letters, size = 30, replace = TRUE)
 ```
 
 ```
-##  [1] "n" "n" "b" "n" "z" "a" "e" "h" "q" "j" "n" "m" "y" "r" "q" "c" "x" "s" "q"
-## [20] "e" "y" "v" "f" "m" "f" "t" "h" "n" "p" "h"
+##  [1] "b" "l" "r" "h" "p" "x" "x" "y" "g" "l" "i" "l" "g" "r" "a" "b" "c" "b" "e"
+## [20] "g" "z" "d" "n" "t" "c" "j" "k" "g" "y" "b"
 ```
 
 ---
@@ -436,7 +436,7 @@ sample(coin)
 ```
 
 ```
-## [1] "T" "H"
+## [1] "H" "T"
 ```
 
 ```r
@@ -452,12 +452,12 @@ sample(coin, 100, replace = TRUE)
 ```
 
 ```
-##   [1] "T" "H" "H" "H" "T" "T" "H" "H" "T" "T" "H" "T" "H" "T" "H" "T" "H" "T"
-##  [19] "T" "H" "T" "H" "T" "H" "T" "H" "H" "T" "H" "H" "T" "T" "H" "H" "T" "H"
-##  [37] "H" "H" "H" "T" "T" "T" "H" "H" "T" "T" "H" "T" "T" "T" "T" "T" "H" "H"
-##  [55] "T" "H" "T" "T" "T" "T" "T" "T" "T" "T" "H" "T" "H" "H" "T" "H" "H" "T"
-##  [73] "H" "H" "H" "H" "T" "T" "H" "H" "H" "H" "H" "T" "T" "H" "H" "T" "T" "H"
-##  [91] "T" "H" "H" "T" "H" "H" "T" "H" "T" "H"
+##   [1] "H" "T" "H" "T" "H" "H" "T" "H" "T" "H" "H" "T" "H" "H" "H" "H" "T" "T"
+##  [19] "H" "T" "T" "H" "H" "H" "H" "T" "T" "H" "T" "T" "H" "H" "H" "H" "T" "H"
+##  [37] "T" "H" "H" "H" "H" "H" "T" "T" "T" "H" "H" "H" "T" "T" "H" "T" "H" "H"
+##  [55] "H" "T" "T" "H" "H" "H" "H" "T" "T" "T" "T" "H" "H" "T" "T" "H" "T" "H"
+##  [73] "T" "T" "H" "T" "H" "H" "T" "H" "T" "H" "T" "H" "H" "T" "T" "H" "H" "H"
+##  [91] "H" "H" "T" "H" "H" "H" "T" "T" "T" "T"
 ```
 
 ---
@@ -1106,34 +1106,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-<!-- Source: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/ -->
-<style>
-.logo {
-  background-image: url(images/hex/DATA606.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 2em;
-  right: 0.5em;
-  width: 55px;
-  height: 64px;
-  z-index: 0;
-}
-</style>
-
-<script>
-document
-  .querySelectorAll(
-    '.remark-slide-content' +
-    ':not(.title-slide)' +
-    // add additional classes to exclude here, e.g.
-    // ':not(.inverse)' +
-    ':not(.hide-logo)'
-  )
-  .forEach(el => {
-    el.innerHTML += '<div class="logo"></div>';
-  });
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

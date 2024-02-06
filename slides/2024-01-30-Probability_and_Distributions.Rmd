@@ -18,7 +18,6 @@ output:
         scroll: false
     includes:
       in_header: [assets/header.html]
-      after_body: [assets/insert-logo.html]
 editor_options: 
   chunk_output_type: console
 ---

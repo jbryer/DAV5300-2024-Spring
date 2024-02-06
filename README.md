@@ -242,7 +242,8 @@ book): 3.7, 3.17, 3.25, 3.33, 3.37
 2024-02-18
 </td>
 <td style="text-align:left;">
-Bivariate Regression
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-02-06-Linear_Regression.pdf'>Bivariate
+Regression</a>
 </td>
 <td style="text-align:left;">
 <p>
@@ -253,7 +254,7 @@ IMStat <a href="https://openintro-ims.netlify.app/model-slr">Chapter
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/07_simple_linear_regression.zip">Regression
-Lab</a><br /> Homework: TBD
+Lab</a><br /> Homework: 7.4, 7.8, 7.20, 7.22
 </p>
 </td>
 </tr>
