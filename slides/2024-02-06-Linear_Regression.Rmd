@@ -2,7 +2,7 @@
 title: "Linear Regression"
 subtitle: "Computational Mathematics and Statistics"
 author: Jason Bryer, Ph.D.
-date: "January 6, 2024"
+date: "February 6, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -41,7 +41,7 @@ class: center, middle, inverse, title-slide
 ---
 # One Minute Paper Results
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, eval=TRUE}
 library(googlesheets4)
 omp <- read_sheet(one_minute_paper_results)
 omp <- omp %>% dplyr::filter(`Class Date` == 'January 30')
@@ -50,13 +50,13 @@ omp <- omp %>% dplyr::filter(`Class Date` == 'January 30')
 
 .pull-left[
 **What was the most important thing you learned during this class?**
-```{r, echo=FALSE, fig.height=9}
+```{r, echo=FALSE, fig.height=9, eval=TRUE}
 ompWordCloud(omp$`What was the most important thing you learned during this class?`)
 ```
 ]
 .pull-right[
 **What important question remains unanswered for you?**
-```{r, echo=FALSE, fig.height=9}
+```{r, echo=FALSE, fig.height=9, eval=TRUE}
 ompWordCloud(omp$`What important question remains unanswered for you?`)
 ```
 ]
@@ -1008,12 +1008,15 @@ See also the Github repository for more information: https://github.com/jbryer/N
 
 
 ---
-class: left, font140
 # One Minute Paper
 
-Complete the one minute paper: 
-`r one_minute_paper`
+.pull-left[
+Complete the one minute paper: `r one_minute_paper`
 
 1. What was the most important thing you learned during this class?
-2. What important question remains unanswered for you?
 
+2. What important question remains unanswered for you?
+]
+.pull-right[
+<img src='images/one_minute_paper.jpg' alt='One minute paper QR code' />
+]
