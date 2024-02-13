@@ -269,18 +269,18 @@ Lab</a><br /> Homework: 7.4, 7.8, 7.20, 7.22
 2024-02-18
 </td>
 <td style="text-align:left;">
-Multiple Regression
+Maximum Likelihood Estimation and Logistic Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
-8</a>
+IMStat
+<a href="https://openintro-ims.netlify.app/model-logistic">Chapter 9</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_multiple_regression.zip">Multiple
-Regression Lab</a><br /> Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_logistic_regression.zip">Logistic
+Regression Lab</a> Homework: TBD
 </p>
 </td>
 </tr>
@@ -295,18 +295,18 @@ Regression Lab</a><br /> Homework: TBD
 2024-02-25
 </td>
 <td style="text-align:left;">
-Maximum Likelihood Estimation and Logistic Regression
+Multiple Regression
 </td>
 <td style="text-align:left;">
 <p>
-IMStat
-<a href="https://openintro-ims.netlify.app/model-logistic">Chapter 9</a>
+IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
+8</a>
 </p>
 </td>
 <td style="text-align:left;">
 <p>
-<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_logistic_regression.zip">Logistic
-Regression Lab</a> Homework: TBD
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_multiple_regression.zip">Multiple
+Regression Lab</a><br /> Homework: TBD
 </p>
 </td>
 </tr>
