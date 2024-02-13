@@ -280,7 +280,7 @@ IMStat
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/09_logistic_regression.zip">Logistic
-Regression Lab</a> Homework: TBD
+Regression Lab</a> Homework: 9.2, 9.4, 9.6
 </p>
 </td>
 </tr>
