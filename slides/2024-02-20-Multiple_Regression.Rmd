@@ -1,7 +1,7 @@
 ---
 title: "Multiple Linear Regression"
 subtitle: "Computational Mathematics and Statistics"
-author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+author: Jason Bryer, Ph.D.
 date: "February 20, 2024"
 output:
   xaringan::moon_reader:
@@ -81,6 +81,24 @@ class: inverse, middle, center
 # Data Project
 
 The purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final poster. The outline for the proposal is outlined in the template. When submitting the assignments, include the R Markdown file  and PDF. Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data.
+
+All information is located here:  
+https://github.com/jbryer/DAV5300-2024-Spring/tree/master/project/data_project.md
+
+---
+# Proposal
+
+https://github.com/jbryer/DAV5300-2024-Spring/tree/master/project
+
+* Data Preparation
+* Research question - You should phrase your research question in a way that matches up with the scope of inference your dataset allows for.
+* Cases - What are the cases, and how many are there?
+* Variables - What are the variables?
+* Data collection - Describe the method of data collection.
+* Type of study - What type of study is this (observational/experiment)?
+* Data Source - If you collected the data, state self-collected. If not, provide a citation/link.
+* Describe your variables? - Are they quantitative or qualitative. If you are are running a regression or similar model, which one is your dependent variable?
+* Relevant summary statistics - Provide summary statistics for each the variables. Also include appropriate visualizations related to your research question (e.g. scatter plot, boxplots, etc). This step requires the use of R, hence a code chunk is provided below. Insert more code chunks as needed.
 
 
 ---

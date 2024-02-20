@@ -3,7 +3,7 @@
   <head>
     <title>Multiple Linear Regression</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Jason Bryer, Ph.D. and Angela Lui, Ph.D." />
+    <meta name="author" content="Jason Bryer, Ph.D." />
     <meta name="date" content="2024-02-20" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -20,7 +20,7 @@ class: center, middle, inverse, title-slide
 
 # Multiple Linear Regression
 ## Computational Mathematics and Statistics
-### Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+### Jason Bryer, Ph.D.
 ### February 20, 2024
 
 ---
@@ -38,6 +38,38 @@ class: center, middle, inverse, title-slide
 &lt;img src="2024-02-20-Multiple_Regression_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
+
+---
+class: inverse, middle, center
+# Data Project
+
+---
+# Data Project
+
+The purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final poster. The outline for the proposal is outlined in the template. When submitting the assignments, include the R Markdown file  and PDF. Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data.
+
+All information is located here:  
+https://github.com/jbryer/DAV5300-2024-Spring/tree/master/project/data_project.md
+
+---
+# Proposal
+
+https://github.com/jbryer/DAV5300-2024-Spring/tree/master/project
+
+* Data Preparation
+* Research question - You should phrase your research question in a way that matches up with the scope of inference your dataset allows for.
+* Cases - What are the cases, and how many are there?
+* Variables - What are the variables?
+* Data collection - Describe the method of data collection.
+* Type of study - What type of study is this (observational/experiment)?
+* Data Source - If you collected the data, state self-collected. If not, provide a citation/link.
+* Describe your variables? - Are they quantitative or qualitative. If you are are running a regression or similar model, which one is your dependent variable?
+* Relevant summary statistics - Provide summary statistics for each the variables. Also include appropriate visualizations related to your research question (e.g. scatter plot, boxplots, etc). This step requires the use of R, hence a code chunk is provided below. Insert more code chunks as needed.
+
+
+---
+class: inverse, middle, center
+# Multiple Regression
 
 
 ---
@@ -172,7 +204,7 @@ $$ \hat{weight} = 198 + 0.72 volume - 184 coverpb $$
 
 &lt;center&gt;
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:57 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:41 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; 197.9628 &lt;/td&gt; &lt;td align="right"&gt; 59.1927 &lt;/td&gt; &lt;td align="right"&gt; 3.34 &lt;/td&gt; &lt;td align="right"&gt; 0.0058 &lt;/td&gt; &lt;/tr&gt;
@@ -277,7 +309,7 @@ print(xtable::xtable(anova.poverty, digits = 2), type='html')
 ```
 
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:58 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:42 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Df &lt;/th&gt; &lt;th&gt; Sum Sq &lt;/th&gt; &lt;th&gt; Mean Sq &lt;/th&gt; &lt;th&gt; F value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;F) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td&gt; female_house &lt;/td&gt; &lt;td align="right"&gt; 1.00 &lt;/td&gt; &lt;td align="right"&gt; 132.57 &lt;/td&gt; &lt;td align="right"&gt; 132.57 &lt;/td&gt; &lt;td align="right"&gt; 18.68 &lt;/td&gt; &lt;td align="right"&gt; 0.00 &lt;/td&gt; &lt;/tr&gt;
@@ -314,7 +346,7 @@ print(xtable::xtable(lm.poverty2), type='html')
 ```
 
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:58 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:42 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; -2.5789 &lt;/td&gt; &lt;td align="right"&gt; 5.7849 &lt;/td&gt; &lt;td align="right"&gt; -0.45 &lt;/td&gt; &lt;td align="right"&gt; 0.6577 &lt;/td&gt; &lt;/tr&gt;
@@ -330,7 +362,7 @@ print(xtable::xtable(anova.poverty2, digits = 3), type='html')
 ```
 
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:58 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:42 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Df &lt;/th&gt; &lt;th&gt; Sum Sq &lt;/th&gt; &lt;th&gt; Mean Sq &lt;/th&gt; &lt;th&gt; F value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;F) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td&gt; female_house &lt;/td&gt; &lt;td align="right"&gt; 1.000 &lt;/td&gt; &lt;td align="right"&gt; 132.568 &lt;/td&gt; &lt;td align="right"&gt; 132.568 &lt;/td&gt; &lt;td align="right"&gt; 18.745 &lt;/td&gt; &lt;td align="right"&gt; 0.000 &lt;/td&gt; &lt;/tr&gt;
@@ -356,7 +388,7 @@ $$ R^2 = \frac{explained \quad variability \quad in \quad y}{total \quad variabi
 poverty vs % female head of household
 
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:59 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:43 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; 3.3094 &lt;/td&gt; &lt;td align="right"&gt; 1.8970 &lt;/td&gt; &lt;td align="right"&gt; 1.74 &lt;/td&gt; &lt;td align="right"&gt; 0.0873 &lt;/td&gt; &lt;/tr&gt;
@@ -366,7 +398,7 @@ poverty vs % female head of household
 poverty vs % female head of household and % female household
 
 &lt;!-- html table generated in R 4.3.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Tue Feb 20 11:13:59 2024 --&gt;
+&lt;!-- Tue Feb 20 11:53:43 2024 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; -2.5789 &lt;/td&gt; &lt;td align="right"&gt; 5.7849 &lt;/td&gt; &lt;td align="right"&gt; -0.45 &lt;/td&gt; &lt;td align="right"&gt; 0.6577 &lt;/td&gt; &lt;/tr&gt;
@@ -427,11 +459,11 @@ study[sample(nrow(study), 5),]
 
 ```
 ##    Hours Pass
-## 1   0.50    0
-## 8   2.00    0
+## 4   1.25    0
+## 18  4.75    1
 ## 16  4.25    1
-## 7   1.75    1
-## 17  4.50    1
+## 1   0.50    0
+## 20  5.50    1
 ```
 
 ```r
@@ -578,7 +610,7 @@ This is the proportions of survivors and defines what our "guessing" rate is. Th
 ```
 ## 
 ##         0         1 
-## 0.6439024 0.3560976
+## 0.6341463 0.3658537
 ```
 
 ---
@@ -597,26 +629,26 @@ summary(lr.out)
 ## glm(formula = num ~ ., family = binomial(link = "logit"), data = heart_train)
 ## 
 ## Coefficients:
-##              Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept) -9.713212   3.639784  -2.669 0.007616 ** 
-## age          0.025941   0.032617   0.795 0.426425    
-## sex          1.132473   0.546129   2.074 0.038113 *  
-## cp           1.014253   0.268894   3.772 0.000162 ***
-## trestbps     0.009105   0.013680   0.666 0.505656    
-## chol         0.005494   0.002839   1.935 0.052929 .  
-## fbs          0.471151   0.873288   0.540 0.589532    
-## restecg     -0.814914   0.528523  -1.542 0.123105    
-## thalach      0.002345   0.011140   0.211 0.833247    
-## exang        1.226702   0.562913   2.179 0.029316 *  
-## oldpeak      0.973037   0.326754   2.978 0.002902 ** 
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.790e+00  3.544e+00  -1.633 0.102371    
+## age          3.357e-05  3.236e-02   0.001 0.999172    
+## sex          2.036e+00  6.131e-01   3.321 0.000897 ***
+## cp           9.591e-01  2.731e-01   3.512 0.000445 ***
+## trestbps    -1.529e-02  1.355e-02  -1.129 0.259084    
+## chol         7.744e-03  3.128e-03   2.476 0.013279 *  
+## fbs          1.770e+00  8.628e-01   2.052 0.040209 *  
+## restecg     -8.019e-01  5.749e-01  -1.395 0.163028    
+## thalach     -2.255e-03  1.137e-02  -0.198 0.842746    
+## exang        4.852e-01  5.596e-01   0.867 0.385946    
+## oldpeak      1.530e+00  3.571e-01   4.284 1.84e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
-##     Null deviance: 266.97  on 204  degrees of freedom
-## Residual deviance: 147.24  on 194  degrees of freedom
-## AIC: 169.24
+##     Null deviance: 269.25  on 204  degrees of freedom
+## Residual deviance: 144.68  on 194  degrees of freedom
+## AIC: 166.68
 ## 
 ## Number of Fisher Scoring iterations: 6
 ```
@@ -645,11 +677,11 @@ tab &lt;- table(heart_train$prediction_class,
 ```
 ##        
 ##                  0          1
-##   FALSE 0.59024390 0.09268293
-##   TRUE  0.05365854 0.26341463
+##   FALSE 0.58536585 0.08780488
+##   TRUE  0.04878049 0.27804878
 ```
 
-For the training set, the overall accuracy is 85.37%. Recall that 64.39% people did not have a heart attach. Therefore, the simplest model would be to predict that no one had a heart attack, which would mean we would be correct 64.39% of the time. Therefore, our prediction model is 20.98% better than guessing.
+For the training set, the overall accuracy is 86.34%. Recall that 63.41% people did not have a heart attach. Therefore, the simplest model would be to predict that no one had a heart attack, which would mean we would be correct 63.41% of the time. Therefore, our prediction model is 22.93% better than guessing.
 
 ---
 # Checking with the validation dataset
@@ -662,7 +694,7 @@ For the training set, the overall accuracy is 85.37%. Recall that 64.39% people 
 ```
 ## 
 ##         0         1 
-## 0.6292135 0.3707865
+## 0.6516854 0.3483146
 ```
 
 ```r
@@ -675,11 +707,11 @@ tab_test &lt;- table(heart_test$prediciton_class, heart_test$num) %&gt;%
 ```
 ##        
 ##                  0          1
-##   FALSE 0.53932584 0.10112360
+##   FALSE 0.56179775 0.07865169
 ##   TRUE  0.08988764 0.26966292
 ```
 
-The overall accuracy is 80.9%, or 18% better than guessing.
+The overall accuracy is 83.15%, or 18% better than guessing.
 
 ---
 # Receiver Operating Characteristic (ROC) Curve
@@ -693,10 +725,10 @@ summary(roc)
 ```
 
 ```
-## AUC = 0.909
+## AUC = 0.908
 ## Cost of false-positive = 1
 ## Cost of false-negative = 1
-## Threshold with minimum cost = 0.465
+## Threshold with minimum cost = 0.485
 ```
 
 ---
