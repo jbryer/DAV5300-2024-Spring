@@ -2,7 +2,7 @@
 title: "Multiple Linear Regression"
 subtitle: "Computational Mathematics and Statistics"
 author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
-date: "February 13, 2024"
+date: "February 20, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -55,7 +55,7 @@ class: center, middle, inverse, title-slide
 ```{r, echo=FALSE}
 library(googlesheets4)
 omp <- read_sheet(one_minute_paper_results)
-omp <- omp %>% dplyr::filter(`Class Date` == 'February 6')
+omp <- omp %>% dplyr::filter(`Class Date` == 'February 13')
 # source('word_cloud.R')
 ```
 
@@ -72,6 +72,20 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 ```
 ]
 
+
+---
+class: inverse, middle, center
+# Data Project
+
+---
+# Data Project
+
+The purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final poster. The outline for the proposal is outlined in the template. When submitting the assignments, include the R Markdown file  and PDF. Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data.
+
+
+---
+class: inverse, middle, center
+# Multiple Regression
 
 
 ---
