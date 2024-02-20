@@ -269,7 +269,8 @@ Lab</a><br /> Homework: 7.4, 7.8, 7.20, 7.22
 2024-02-18
 </td>
 <td style="text-align:left;">
-Maximum Likelihood Estimation and Logistic Regression
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-02-13-Logistic_Regression.pdf'>Maximum
+Likelihood Estimation and Logistic Regression</a>
 </td>
 <td style="text-align:left;">
 <p>
@@ -295,7 +296,8 @@ Regression Lab</a><br /> Homework: 9.2, 9.4, 9.6
 2024-02-25
 </td>
 <td style="text-align:left;">
-Multiple Regression
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-02-20-Multiple_Regression.pdf'>Multiple
+Regression</a>
 </td>
 <td style="text-align:left;">
 <p>
@@ -306,7 +308,7 @@ IMStat <a href="https://openintro-ims.netlify.app/model-mlr">Chapter
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/08_multiple_regression.zip">Multiple
-Regression Lab</a><br /> Homework: TBD
+Regression Lab</a><br /> Homework: 8.4, 8.6, 8.10
 </p>
 </td>
 </tr>
@@ -326,6 +328,10 @@ There will be no class on February 27th.
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
+<p>
+<a href="https://github.com/jbryer/DAV5300-2024-Spring/tree/master/project/data_project.md">Data
+Project Proposal</a>
+</p>
 </td>
 </tr>
 <tr>
