@@ -345,7 +345,8 @@ Project Proposal</a>
 2024-03-10
 </td>
 <td style="text-align:left;">
-Foundation for Inference / Central Limit Theorem
+<a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-03-05-Foundation_for_Inference.pdf'>Foundation
+for Inference / Central Limit Theorem</a>
 </td>
 <td style="text-align:left;">
 <p>
@@ -359,7 +360,8 @@ and
 <td style="text-align:left;">
 <p>
 <a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/11_foundations_for_inference.zip">Foundation
-for Inference Lab</a> (<em>note there are two parts</em>)
+for Inference Lab</a> (<em>note there are two parts</em>)<br />
+Homework: 11.8, 12.8, 13.2
 </p>
 </td>
 </tr>
@@ -458,7 +460,7 @@ Lab</a>
 2024-04-07
 </td>
 <td style="text-align:left;">
-Introduction to Predictive Modeling
+TBD
 </td>
 <td style="text-align:left;">
 </td>
@@ -562,7 +564,7 @@ degree requirement is assumed to guarantee that the thoughts and
 expressions therein not expressly credited to another are literally the
 student’s own. Evidence to the contrary will result in appropriate
 penalties. For more information, visit
-<http://yu.edu/registrar/grad-catalog/Links> to an external site.
+<https://www.yu.edu/academic-integrity>.
 
 #### Student Support Services
 
