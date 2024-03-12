@@ -107,3 +107,6 @@ for(i in tocopy) {
 # options(blogdown.hugo.version = hugo_version)
 # blogdown::build_site(build_rmd = TRUE)
 # setwd(wd)
+
+# knit the README file
+knitr::knit('README.Rmd')

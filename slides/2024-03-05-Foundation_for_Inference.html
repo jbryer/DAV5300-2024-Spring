@@ -251,7 +251,7 @@ mean(pop)
 ```
 
 ```
-## [1] 0.4995773
+## [1] 0.4993939
 ```
 
 
@@ -267,7 +267,7 @@ mean(samp1)
 ```
 
 ```
-## [1] 0.4272214
+## [1] 0.6909109
 ```
 
 
@@ -287,7 +287,7 @@ mean(samp2)
 ```
 
 ```
-## [1] 0.5459595
+## [1] 0.4861249
 ```
 
 
@@ -312,8 +312,8 @@ head(samples, n=8)
 ```
 
 ```
-## [1] 0.5656232 0.5315182 0.4929338 0.3819008 0.4967768 0.4871239 0.4886895
-## [8] 0.5769244
+## [1] 0.4683913 0.5260079 0.5175490 0.5200542 0.4918802 0.4788191 0.4642701
+## [8] 0.4727353
 ```
 
 
@@ -370,7 +370,7 @@ mean(samp2)
 ```
 
 ```
-## [1] 0.5055259
+## [1] 0.4563357
 ```
 
 ```r
@@ -378,7 +378,7 @@ mean(samp2)
 ```
 
 ```
-## [1] 0.05587706
+## [1] 0.05442855
 ```
 
 ---
@@ -403,16 +403,16 @@ qnorm(0.025) # Remember we need to consider the two tails, 2.5% to the left, 2.5
 ```
 
 ```
-## [1] 0.3960068 0.6150449
+## [1] 0.3496558 0.5630157
 ```
 
 
 ---
 # Confidence Intervals (cont.)
 
-We are 95% confident that the true population mean is between 0.3960068, 0.6150449. 
+We are 95% confident that the true population mean is between 0.3496558, 0.5630157. 
 
-That is, if we were to take 100 random samples, we would expect at least 95% of those samples to have a mean within 0.3960068, 0.6150449.
+That is, if we were to take 100 random samples, we would expect at least 95% of those samples to have a mean within 0.3496558, 0.5630157.
 
 
 ```r
@@ -473,10 +473,10 @@ Using confidence intervals, if the *null* value is within the confidence interva
 ```
 
 ```
-## [1] 0.3960068 0.6150449
+## [1] 0.3496558 0.5630157
 ```
 
-Since 0.5 fall within 0.3960068, 0.6150449, we *fail* to reject the null hypothesis.
+Since 0.5 fall within 0.3496558, 0.5630157, we *fail* to reject the null hypothesis.
 
 
 ---
@@ -682,7 +682,7 @@ mean(pop)
 ```
 
 ```
-## [1] 0.4997953
+## [1] 0.5003672
 ```
 
 &lt;img src="2024-03-05-Foundation_for_Inference_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
@@ -713,7 +713,7 @@ head(boot.samples)
 ```
 
 ```
-## [1] 0.5024606 0.4959091 0.5208348 0.5300248 0.5333028 0.5183713
+## [1] 0.5060991 0.5469949 0.4158902 0.5520478 0.5251587 0.4714892
 ```
 
 ---
@@ -741,7 +741,7 @@ c(mean(boot.samples) - 1.96 * sd(boot.samples),
 ```
 
 ```
-## [1] 0.4711016 0.6257067
+## [1] 0.3804703 0.5526796
 ```
 
 ---
@@ -758,7 +758,7 @@ head(boot.samples.median)
 ```
 
 ```
-## [1] 0.5450772 0.6927391 0.4493164 0.5849013 0.5694853 0.5874274
+## [1] 0.3258994 0.5304095 0.3957203 0.4470171 0.3617451 0.5295616
 ```
 
 95% confidence interval for the median
@@ -770,7 +770,7 @@ c(mean(boot.samples.median) - 1.96 * sd(boot.samples.median),
 ```
 
 ```
-## [1] 0.4559113 0.6592203
+## [1] 0.2767469 0.6426336
 ```
 
 ---
@@ -803,15 +803,18 @@ class: inverse, middle, center
 
 
 ---
-class: left, font140
 # One Minute Paper
 
-Complete the one minute paper: 
-https://forms.gle/CD5Qxkq3xtdxSheW8
+.pull-left[
+Complete the one minute paper: https://forms.gle/CD5Qxkq3xtdxSheW8
 
 1. What was the most important thing you learned during this class?
-2. What important question remains unanswered for you?
 
+2. What important question remains unanswered for you?
+]
+.pull-right[
+&lt;img src='images/one_minute_paper.jpg' alt='One minute paper QR code' /&gt;
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

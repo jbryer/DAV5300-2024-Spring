@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Missing Data in R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jason Bryer, Ph.D." />
+    <meta name="date" content="2019-10-17" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="assets/fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: center, middle, inverse, title-slide
+
+# Missing Data in R
+## 
+### Jason Bryer, Ph.D.
+### 2019-10-17
+
+
+---
+# Classifications of Missing Data
+
+* **MCAR** - Missing completely at random if the events that lead to any particular data-item being missing are independent both of observable variables and of unobservable parameters of interest, and occur entirely at random. When data are MCAR, the analysis performed on the data is unbiased; however, data are rarely MCAR.
+
+* **MAR** - Missing at random occurs when the missingness is not random, but where missingness can be fully accounted for by variables where there is complete information.
+
+* **NMAR** - Not missing at random (also known as nonignorable nonresponse) is data that is neither MAR nor MCAR (i.e. the value of the variable that's missing is related to the reason it's missing).
+
+&lt;!-- Source: Wikipedia https://en.m.wikipedia.org/wiki/Missing_data --&gt;
+
+---
+# Methods for Handling Missing Data
+
+&lt;img src="images/MissingDataMethods.png" width="833" style="display: block; margin: auto;" /&gt;
+
+.font70[Kabacoff, 2011, p. 355]
+
+---
+# Mammal Sleep Data
+
+Allison, T. &amp; Chichetti, D. (1976). [Sleep in mammals: ecological and constitutional correlates.](https://pdfs.semanticscholar.org/8d4f/202354bf0fd1bd445792340e16acc042ec6d.pdf) *Science 194* (4266), 732–734.
+
+.pull-left[
+**Abstract** *The interrelationships between sleep, ecological, and constitutional variables were assessed statistically for 39 mammalian species. Slow-wave sleep is negatively associated with a factor related to body size, which suggests that large amounts of this sleep phase are disadvantageous in large species. Paradoxical sleep is associated with a factor related to predatory danger, which suggests that large amounts of this sleep phase are disadvantageous in prey species.*
+
+]
+
+.pull-right[
+* &lt;font size='3'&gt;`BodyWgt` - Body weight in kilograms&lt;/font&gt;
+* &lt;font size='3'&gt;`BrainWgt` - Brain weight in grams&lt;/font&gt;
+* &lt;font size='3'&gt;`NonD` - Non-dreaming sleep (hours / day)&lt;/font&gt;
+* &lt;font size='3'&gt;`Dream` - Dreaming sleep (hours / day)&lt;/font&gt;
+* &lt;font size='3'&gt;`Sleep` - Total sleep&lt;/font&gt;
+* &lt;font size='3'&gt;`Span` - Life-span in years&lt;/font&gt;
+* &lt;font size='3'&gt;`Gest` - Gestation time in days&lt;/font&gt;
+* &lt;font size='3'&gt;`Pred` - Prediction index: 1 = minimum (least likely to be preyed upon) to 5 = maximum (most likely to be preyed upon)&lt;/font&gt;
+* &lt;font size='3'&gt;`Exp` - Sleep exposure index: 1 = least exposed (e.g. animal sleeps in a well-protected den) to 5 = most exposed&lt;/font&gt;
+* &lt;font size='3'&gt;`Danger` - Overall danger index (based on the above two indices and other information): 1 = least danger (from other animals) to 5 = most danger (from other animals)&lt;/font&gt;
+]
+
+---
+# Mammal Sleep Data
+
+
+```r
+data(sleep, package="VIM")
+str(sleep)
+```
+
+```
+## 'data.frame':	62 obs. of  10 variables:
+##  $ BodyWgt : num  6654 1 3.38 0.92 2547 ...
+##  $ BrainWgt: num  5712 6.6 44.5 5.7 4603 ...
+##  $ NonD    : num  NA 6.3 NA NA 2.1 9.1 15.8 5.2 10.9 8.3 ...
+##  $ Dream   : num  NA 2 NA NA 1.8 0.7 3.9 1 3.6 1.4 ...
+##  $ Sleep   : num  3.3 8.3 12.5 16.5 3.9 9.8 19.7 6.2 14.5 9.7 ...
+##  $ Span    : num  38.6 4.5 14 NA 69 27 19 30.4 28 50 ...
+##  $ Gest    : num  645 42 60 25 624 180 35 392 63 230 ...
+##  $ Pred    : int  3 3 1 5 3 4 1 4 1 1 ...
+##  $ Exp     : int  5 1 1 2 5 4 1 5 2 1 ...
+##  $ Danger  : int  3 3 1 3 4 4 1 4 1 1 ...
+```
+
+---
+# Complete Cases
+
+
+```r
+complete.cases(sleep)
+```
+
+```
+##  [1] FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+## [13] FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE
+## [25]  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE
+## [37]  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE
+## [49]  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+## [61]  TRUE FALSE
+```
+
+```r
+head(sleep[complete.cases(sleep),])
+```
+
+```
+##    BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## 2    1.000      6.6  6.3   2.0   8.3  4.5   42    3   1      3
+## 5 2547.000   4603.0  2.1   1.8   3.9 69.0  624    3   5      4
+## 6   10.550    179.5  9.1   0.7   9.8 27.0  180    4   4      4
+## 7    0.023      0.3 15.8   3.9  19.7 19.0   35    1   1      1
+## 8  160.000    169.0  5.2   1.0   6.2 30.4  392    4   5      4
+## 9    3.300     25.6 10.9   3.6  14.5 28.0   63    1   2      1
+```
+
+---
+# Incomplete Cases
+
+
+```r
+head(sleep[!complete.cases(sleep),])
+```
+
+```
+##     BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## 1  6654.000   5712.0   NA    NA   3.3 38.6  645    3   5      3
+## 3     3.385     44.5   NA    NA  12.5 14.0   60    1   1      1
+## 4     0.920      5.7   NA    NA  16.5   NA   25    5   2      3
+## 13    0.550      2.4  7.6   2.7  10.3   NA   NA    2   1      2
+## 14  187.100    419.0   NA    NA   3.1 40.0  365    5   5      5
+## 19    1.410     17.5  4.8   1.3   6.1 34.0   NA    1   2      1
+```
+
+---
+# How much is missing?
+
+Number of missing values
+
+
+```r
+sum(is.na(sleep$Dream))
+```
+
+```
+## [1] 12
+```
+
+Percent missing
+
+
+```r
+mean(is.na(sleep$Dream))
+```
+
+```
+## [1] 0.1935484
+```
+
+Percent of rows with missing data
+
+
+```r
+mean(!complete.cases(sleep))
+```
+
+```
+## [1] 0.3225806
+```
+
+---
+# Pattern of Missingness
+
+
+```r
+md.pattern(sleep, rotate.names = TRUE)
+```
+
+&lt;img src="MissingData_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Visualizing Missingness
+
+
+```r
+aggr(sleep, prop=FALSE, numbers=TRUE)
+```
+
+&lt;img src="MissingData_files/figure-html/fig-aggr-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Visualizing Missingness
+
+
+
+```r
+matrixplot(sleep)
+```
+
+&lt;img src="MissingData_files/figure-html/fig-matrixplot-1.png" style="display: block; margin: auto;" /&gt;
+
+```
+## 
+## Click in a column to sort by the corresponding variable.
+## To regain use of the VIM GUI and the R console, click outside the plot region.
+```
+
+---
+# Visualizing Missingness
+
+
+```r
+marginplot(sleep[,c('Gest','Dream')], pch=c(20), col=c('darkgray','red','blue'))
+```
+
+&lt;img src="MissingData_files/figure-html/fig-marginplot-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Shadow Matrix
+
+
+```r
+sm &lt;- as.data.frame(abs(is.na(sleep)))
+head(sleep)
+```
+
+```
+##    BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## 1 6654.000   5712.0   NA    NA   3.3 38.6  645    3   5      3
+## 2    1.000      6.6  6.3   2.0   8.3  4.5   42    3   1      3
+## 3    3.385     44.5   NA    NA  12.5 14.0   60    1   1      1
+## 4    0.920      5.7   NA    NA  16.5   NA   25    5   2      3
+## 5 2547.000   4603.0  2.1   1.8   3.9 69.0  624    3   5      4
+## 6   10.550    179.5  9.1   0.7   9.8 27.0  180    4   4      4
+```
+
+```r
+head(sm)
+```
+
+```
+##   BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## 1       0        0    1     1     0    0    0    0   0      0
+## 2       0        0    0     0     0    0    0    0   0      0
+## 3       0        0    1     1     0    0    0    0   0      0
+## 4       0        0    1     1     0    1    0    0   0      0
+## 5       0        0    0     0     0    0    0    0   0      0
+## 6       0        0    0     0     0    0    0    0   0      0
+```
+
+---
+# Correlation of Missingness
+
+Examine the correlation of missingness between variables
+
+
+```r
+# Extract varabibles that have any missingness
+y &lt;- sm[which(sapply(sm, sd) &gt; 0)] 
+cor(y)
+```
+
+```
+##              NonD       Dream       Sleep        Span        Gest
+## NonD   1.00000000  0.90711474  0.48626454  0.01519577 -0.14182716
+## Dream  0.90711474  1.00000000  0.20370138  0.03752394 -0.12865350
+## Sleep  0.48626454  0.20370138  1.00000000 -0.06896552 -0.06896552
+## Span   0.01519577  0.03752394 -0.06896552  1.00000000  0.19827586
+## Gest  -0.14182716 -0.12865350 -0.06896552  0.19827586  1.00000000
+```
+
+---
+# Missingness and observed variables
+
+Relationship between missingness and observed variables
+
+
+```r
+cor(sleep, y, use='pairwise.complete.obs')
+```
+
+```
+##                 NonD       Dream        Sleep        Span        Gest
+## BodyWgt   0.22682614  0.22259108  0.001684992 -0.05831706 -0.05396818
+## BrainWgt  0.17945923  0.16321105  0.007859438 -0.07921370 -0.07332961
+## NonD              NA          NA           NA -0.04314514 -0.04553485
+## Dream    -0.18895206          NA -0.188952059  0.11699247  0.22774685
+## Sleep    -0.08023157 -0.08023157           NA  0.09638044  0.03976464
+## Span      0.08336361  0.05981377  0.005238852          NA -0.06527277
+## Gest      0.20239201  0.05140232  0.159701523 -0.17495305          NA
+## Pred      0.04758438 -0.06834378  0.202462711  0.02313860 -0.20101655
+## Exp       0.24546836  0.12740768  0.260772984 -0.19291879 -0.19291879
+## Danger    0.06528387 -0.06724755  0.208883617 -0.06666498 -0.20443928
+```
+
+Rows are observed variables, columns missing indicators. Non-dreaming (`NonD`) sleep scores are more likely to be missing with larger body weights (`BodyWgt`) with r=0.227. Since the correlations are not very large suggests that the nature of the missingness deviates minimally from the MCAR and MAR assumptions.
+
+---
+# Understanding missingness
+
+Kabacoff (2011, p. 362) suggests the following questions to address:
+
+* What percentage of the data is missing?
+
+* Is it concentrated in a few variables, or widely distributed?
+
+* Does it appear to be random?
+
+* Does the covariation of missing data with each other or with the observed data suggest a possible mechanism that's producing the missing values.
+
+---
+# Options for analyzing data with missing values
+
+* Complete case analysis (listwise deletion) - Use the `na.omit` function to remove any rows with missing values. 
+
+* Pairwise deletion
+
+* Multiple imputation
+
+* Simple imputation - replace values with a single value (e.g. mean, median, mode)
+
+---
+# Multiple Imputation
+
+First introduced by Rubin (1987) as way of handling missing data. Steps for multiple imputation: 
+
+1. Impute the missing values by using an appropriate model which incorporates random variation.
+
+2. Repeat the first step multiple times (typically 5 to 10 times is sufficient).
+
+3. Perform the desired analysis on each imputed dataset.
+
+4. Pool the results from step 3.
+
+The most common approach is multiple imputation by chained equations (MICE). This has been shown to work very well when data is missing at random, but also in when data is missing not at random ([Sulis, Porcu, &amp; Mariano, 2017](https://link.springer.com/article/10.1007%2Fs00357-017-9220-3)).
+
+
+See volume 45 of the *Journal of Statistical Software* which is a special volume on multiple imputation: http://www.jstatsoft.org/v45/.
+
+
+---
+# Steps for Multiple Imputation
+
+&lt;img src="images/miceSteps.png" width="640" style="display: block; margin: auto;" /&gt;
+
+.font70[Kabacoff, 2011, p. 366]
+
+---
+# Imputing
+
+Using the `mice` package to impute missing values.
+
+
+```r
+( imp &lt;- mice(sleep, printFlag=FALSE, seed=1234) )
+```
+
+```
+## Class: mids
+## Number of multiple imputations:  5 
+## Imputation methods:
+##  BodyWgt BrainWgt     NonD    Dream    Sleep     Span     Gest     Pred 
+##       ""       ""    "pmm"    "pmm"    "pmm"    "pmm"    "pmm"       "" 
+##      Exp   Danger 
+##       ""       "" 
+## PredictorMatrix:
+##          BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## BodyWgt        0        1    1     1     1    1    1    1   1      1
+## BrainWgt       1        0    1     1     1    1    1    1   1      1
+## NonD           1        1    0     1     1    1    1    1   1      1
+## Dream          1        1    1     0     1    1    1    1   1      1
+## Sleep          1        1    1     1     0    1    1    1   1      1
+## Span           1        1    1     1     1    0    1    1   1      1
+## Number of logged events:  6 
+##   it im  dep meth   out
+## 1  3  2 Span  pmm Sleep
+## 2  3  2 Gest  pmm Sleep
+## 3  4  2 Span  pmm Sleep
+## 4  4  2 Gest  pmm Sleep
+## 5  4  4 Span  pmm Sleep
+## 6  5  1 Span  pmm Sleep
+```
+
+---
+# Checking Distributions of Imputed Values
+
+If we assume the data is MCAR, then the imputations should have the same distribution as the observed data.
+
+
+```r
+stripplot(imp, Dream~.imp, pch=20, cex=2)
+```
+
+&lt;img src="MissingData_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Checking Distributions of Imputed Values
+
+
+```r
+stripplot(imp)
+```
+
+&lt;img src="MissingData_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Getting Complete Dataset
+
+
+```r
+dataset5 &lt;- complete(imp, 5)
+head(dataset5)
+```
+
+```
+##    BodyWgt BrainWgt NonD Dream Sleep Span Gest Pred Exp Danger
+## 1 6654.000   5712.0  2.1   0.6   3.3 38.6  645    3   5      3
+## 2    1.000      6.6  6.3   2.0   8.3  4.5   42    3   1      3
+## 3    3.385     44.5 11.0   1.3  12.5 14.0   60    1   1      1
+## 4    0.920      5.7 13.8   2.7  16.5  9.0   25    5   2      3
+## 5 2547.000   4603.0  2.1   1.8   3.9 69.0  624    3   5      4
+## 6   10.550    179.5  9.1   0.7   9.8 27.0  180    4   4      4
+```
+
+---
+# Pooling the imputed datasets
+
+
+```r
+fit &lt;- with(imp, lm(Dream ~ Span + Gest))
+pooled &lt;- pool(fit) 
+summary(pooled)
+```
+
+```
+##          term     estimate   std.error  statistic       df      p.value
+## 1 (Intercept)  2.576623819 0.247394986 10.4150204 51.76050 2.648192e-14
+## 2        Span -0.004927066 0.011595508 -0.4249116 55.77112 6.725360e-01
+## 3        Gest -0.004029477 0.001489892 -2.7045431 47.80248 9.447523e-03
+```
+
+---
+# How much missingness across groups matters?
+
+
+```r
+data(lalonde, package='Matching')
+Tr &lt;- lalonde$treat
+X &lt;- lalonde[,c('age','educ','black','hisp','married','nodegr','re74','re75')]
+lalonde.glm &lt;- glm(treat ~ ., family=binomial, data=cbind(treat=Tr, X))
+summary(lalonde.glm)
+```
+
+```
+## 
+## Call:
+## glm(formula = treat ~ ., family = binomial, data = cbind(treat = Tr, 
+##     X))
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)  1.178e+00  1.056e+00   1.115  0.26474   
+## age          4.698e-03  1.433e-02   0.328  0.74297   
+## educ        -7.124e-02  7.173e-02  -0.993  0.32061   
+## black       -2.247e-01  3.655e-01  -0.615  0.53874   
+## hisp        -8.528e-01  5.066e-01  -1.683  0.09228 . 
+## married      1.636e-01  2.769e-01   0.591  0.55463   
+## nodegr      -9.035e-01  3.135e-01  -2.882  0.00395 **
+## re74        -3.161e-05  2.584e-05  -1.223  0.22122   
+## re75         6.161e-05  4.358e-05   1.414  0.15744   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 604.20  on 444  degrees of freedom
+## Residual deviance: 587.22  on 436  degrees of freedom
+## AIC: 605.22
+## 
+## Number of Fisher Scoring iterations: 4
+```
+
+---
+class: font80
+# Data Preparation
+
+Create a copy of the covariates to simulate missing at random (mar) and not missing at random (nmar).
+
+
+```r
+lalonde.mar &lt;- X
+lalonde.nmar &lt;- X
+missing.rate &lt;- .2                  # What percent of rows will have missing data
+missing.cols &lt;- c('nodegr', 're75') # The columns we will add missing values to
+missing.ratio &lt;- 1.5                # Ratio of missingness for treatment-to-control
+```
+
+Vectors indicating which rows are treatment and control.
+
+
+```r
+treat.rows &lt;- which(lalonde$treat == 1)
+control.rows &lt;- which(lalonde$treat == 0)
+```
+
+Add missingness to the existing data. For the not missing at random data treatment units will have twice as many missing values as the control group.
+
+
+```r
+for(i in missing.cols) {
+	lalonde.mar[sample(nrow(lalonde), nrow(lalonde) * missing.rate), i] &lt;- NA
+	lalonde.nmar[sample(treat.rows, length(treat.rows) * missing.rate * missing.ratio), i] &lt;- NA
+	lalonde.nmar[sample(control.rows, length(control.rows) * missing.rate), i] &lt;- NA
+}
+```
+
+---
+# Proportion of missing values
+
+For our data missing at random.
+
+
+```r
+prop.table(table(is.na(lalonde.mar[,missing.cols[1]]), Tr, useNA='ifany'), 2)
+```
+
+```
+##        Tr
+##                 0         1
+##   FALSE 0.7846154 0.8216216
+##   TRUE  0.2153846 0.1783784
+```
+
+For our data not missing at random.
+
+
+```r
+prop.table(table(is.na(lalonde.nmar[,missing.cols[1]]), Tr, useNA='ifany'), 2)
+```
+
+```
+##        Tr
+##                 0         1
+##   FALSE 0.8000000 0.7027027
+##   TRUE  0.2000000 0.2972973
+```
+
+---
+class: font90
+# Multiple Imputation
+
+Create a shadow matrix. This is a logical vector where each cell is TRUE if the value is missing in the original data frame.
+
+
+```r
+shadow.matrix.mar &lt;- as.data.frame(is.na(lalonde.mar[,missing.cols,drop=FALSE]))
+shadow.matrix.nmar &lt;- as.data.frame(is.na(lalonde.nmar[,missing.cols,drop=FALSE]))
+```
+
+Change the column names to include "_miss" in their name.
+
+
+```r
+names(shadow.matrix.mar) &lt;- names(shadow.matrix.nmar) &lt;- paste0(names(shadow.matrix.mar), '_miss')
+```
+
+Impute the missing values using the mice package
+
+
+```r
+mice.mar &lt;- mice(lalonde.mar, m=1, printFlag=FALSE, seed = 2112)
+mice.nmar &lt;- mice(lalonde.nmar, m=1, printFlag=FALSE, seed = 2112)
+```
+
+Get the imputed data set.
+
+
+```r
+complete.mar &lt;- complete(mice.mar)
+complete.nmar &lt;- complete(mice.nmar)
+```
+
+---
+# Check the regression results (MAR)
+
+
+```r
+lalonde.mar.glm &lt;- glm(treat~., data=cbind(treat=Tr, complete.mar, shadow.matrix.mar))
+summary(lalonde.mar.glm)
+```
+
+```
+## 
+## Call:
+## glm(formula = treat ~ ., data = cbind(treat = Tr, complete.mar, 
+##     shadow.matrix.mar))
+## 
+## Coefficients:
+##                   Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)      7.492e-01  2.545e-01   2.944  0.00342 **
+## age              1.458e-03  3.424e-03   0.426  0.67052   
+## educ            -1.513e-02  1.728e-02  -0.876  0.38175   
+## black           -6.283e-02  8.831e-02  -0.711  0.47720   
+## hisp            -1.931e-01  1.165e-01  -1.657  0.09822 . 
+## married          6.534e-02  6.626e-02   0.986  0.32461   
+## nodegr          -1.895e-01  7.477e-02  -2.535  0.01161 * 
+## re74            -2.616e-06  5.509e-06  -0.475  0.63511   
+## re75             1.202e-06  1.046e-05   0.115  0.90858   
+## nodegr_missTRUE -5.664e-02  5.917e-02  -0.957  0.33902   
+## re75_missTRUE    2.750e-02  5.847e-02   0.470  0.63837   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for gaussian family taken to be 0.2409186)
+## 
+##     Null deviance: 108.09  on 444  degrees of freedom
+## Residual deviance: 104.56  on 434  degrees of freedom
+## AIC: 642.35
+## 
+## Number of Fisher Scoring iterations: 2
+```
+
+---
+# Check the regression results (NMAR)
+
+
+```r
+lalonde.nmar.glm &lt;- glm(treat~., data=cbind(treat=Tr, complete.nmar, shadow.matrix.nmar))
+summary(lalonde.nmar.glm)
+```
+
+```
+## 
+## Call:
+## glm(formula = treat ~ ., data = cbind(treat = Tr, complete.nmar, 
+##     shadow.matrix.nmar))
+## 
+## Coefficients:
+##                   Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)      6.847e-01  2.384e-01   2.871  0.00429 **
+## age              1.674e-03  3.357e-03   0.499  0.61820   
+## educ            -1.503e-02  1.633e-02  -0.920  0.35793   
+## black           -2.709e-02  8.818e-02  -0.307  0.75880   
+## hisp            -1.468e-01  1.157e-01  -1.269  0.20519   
+## married          2.678e-02  6.576e-02   0.407  0.68406   
+## nodegr          -2.378e-01  7.474e-02  -3.182  0.00157 **
+## re74            -7.214e-06  6.030e-06  -1.196  0.23224   
+## re75             1.015e-05  1.028e-05   0.987  0.32417   
+## nodegr_missTRUE  1.318e-01  5.410e-02   2.436  0.01527 * 
+## re75_missTRUE    1.279e-01  5.405e-02   2.367  0.01839 * 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for gaussian family taken to be 0.2334185)
+## 
+##     Null deviance: 108.09  on 444  degrees of freedom
+## Residual deviance: 101.30  on 434  degrees of freedom
+## AIC: 628.28
+## 
+## Number of Fisher Scoring iterations: 2
+```
+
+---
+
+&lt;img src="MissingData_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="MissingData_files/figure-html/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Additional Resources
+
+* [Wikipedia article](https://en.wikipedia.org/wiki/Missing_data)
+
+* [VIM Vignette](https://cran.r-project.org/web/packages/VIMGUI/vignettes/VIM-Imputation.pdf)
+
+* `mice` package website: https://stefvanbuuren.name/mice/
+
+* `mitools` package: http://cran.cnr.berkeley.edu/web/packages/mitools/index.html
+
+* Rubin, D. (1987). [*Multiple Imputation for Nonresponse in Surveys*](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470316696.fmatter). New York: John Wiley &amp; Sons.
+
+* Gelman and Hill's chapter on missing data: http://www.stat.columbia.edu/~gelman/arm/missing.pdf
+
+* Azur, M. J., Stuart, E. A., Frangakis, C., &amp; Leaf, P. J. (2011). [Multiple imputation by chained equations: what is it and how does it work?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/). *International journal of methods in psychiatric research, 20*(1), 40–49. doi:10.1002/mpr.329
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLanguage": "R",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

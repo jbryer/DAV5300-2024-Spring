@@ -930,12 +930,15 @@ ggplot(data = data.frame(x = pop2)) +
 
 
 ---
-class: left, font140
 # One Minute Paper
 
-Complete the one minute paper: 
-`r one_minute_paper`
+.pull-left[
+Complete the one minute paper: `r one_minute_paper`
 
 1. What was the most important thing you learned during this class?
-2. What important question remains unanswered for you?
 
+2. What important question remains unanswered for you?
+]
+.pull-right[
+<img src='images/one_minute_paper.jpg' alt='One minute paper QR code' />
+]
