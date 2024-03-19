@@ -1,8 +1,8 @@
 ---
 title: "Inference for Numerical Data"
-subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
-date: "October 18, 2023"
+subtitle: "Computational Mathematics and Statistics"
+author: Jason Bryer, Ph.D.
+date: "March 19, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -18,7 +18,6 @@ output:
         scroll: false
     includes:
       in_header: [assets/header.html]
-      after_body: [assets/insert-logo.html]
 editor_options: 
   chunk_output_type: console
 ---
@@ -38,45 +37,6 @@ class: center, middle, inverse, title-slide
 ### `r metadata$author`
 ### `r metadata$date`
 
----
-# Midterm Results
-
-* The midterm is worth 10% of your grade.
-* We don't want to share the questions and answers but will provide feedback privately (if you ask questions) and will review questions in the next week or two.
-
-.pull-left[
-```{r, echo = FALSE, fig.height=8}
-midterm <- rbind(read.csv('../private/Midterm/DATA606 Midterm1.csv'),
-				 read.csv('../private/Midterm/DATA606 Midterm2.csv'),
-				 read.csv('../private/Midterm/DATA606 Midterm3.csv'))
-
-scores <- midterm %>% select(paste0('Auto.Score.', 1:20)) %>%
-	mutate(Total = rowSums(across(everything())))
-
-ggplot(scores, aes(x = Total * 10)) + 
-	geom_density() + xlim(c(0, 100)) +
-	ggtitle('Distribution of midterm scores') +
-	xlab('Percent Correct')
-```
-]
-.pull-right[
-```{r, echo = FALSE, fig.height=8}
-midterm_scores <- midterm %>%
-	select(Username,
-		   # paste0('Question.', 1:20),
-		   # paste0('Answer.', 1:20),
-		   paste0('Auto.Score.', 1:20)) %>%
-	rename_with( ~ gsub('Auto.Score.', 'Question ', .x, fixed = TRUE)) %>%
-	melt(id.vars = 'Username',
-		 variable.name = 'Question',
-		 value.name = 'Correct') %>%
-	mutate(Correct = Correct == 0.5)
-
-ggplot(midterm_scores, aes(x = Correct)) + 
-	geom_bar() + facet_wrap(~ Question) +
-	ggtitle('Responses by question')
-```
-]
 
 ---
 # One Minute Paper Results
@@ -84,8 +44,7 @@ ggplot(midterm_scores, aes(x = Correct)) +
 ```{r, echo=FALSE, cache=FALSE}
 library(googlesheets4)
 omp <- read_sheet(one_minute_paper_results)
-omp <- omp %>% dplyr::filter(Topic == 'Inference for Categorical Data (Chapter 6)')
-source('word_cloud.R')
+omp <- omp %>% dplyr::filter(`Class Date` == 'March 12')
 ```
 
 .pull-left[
@@ -102,39 +61,27 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 ]
 
 ---
-
-# Data Project Proposal
-
-Due October 29<sup>th</sup>ish Select a dataset that interests you. For the proposal, you need to answer the questions below.
-
-.font80[
-* Research question
-* What type of statistical test do you plan to do (e.g. t-test, ANOVA, regression, logistic regression, chi-squared, etc.)
-* What are the cases, and how many are there?
-* Describe the method of data collection.
-* What type of study is this (observational/experiment)?
-* Data Source: If you collected the data, state self-collected. If not, provide a citation/link.
-* Response: What is the response variable, and what type is it (numerical/categorical)?
-* Explanatory: What is the explanatory variable(s), and what type is it (numerical/categorical)?
-* Relevant summary statistics
-]
-
-More information including template and suggested datasets located here: https://fall2023.data606.net/assignments/project/
-
-
-
----
 # High School & Beyond Survey  
 
 `r nrow(hsb2)` randomly selected students completed the reading and writing test of the High School and Beyond survey. The results appear to the right. Does there appear to be a difference?
 
+.pull-left[
 ```{r, fig.width=5, fig.height=3.7, eval=TRUE}
 data(hsb2) # in openintro package
 hsb2.melt <- melt(hsb2[,c('id','read', 'write')], id='id')
 ggplot(hsb2.melt, aes(x=variable, y=value)) + 	geom_boxplot() + 
 	geom_point(alpha=0.2, color='blue') + xlab('Test') + ylab('Score')
 ```
+]
+.pull-right[
+```{r, fig.width=5, fig.height=3.7, eval=TRUE}
+ggplot(hsb2.melt, aes(x=variable, y=value)) +
+	ggdist::stat_halfeye() +
+	geom_point(color='blue', position = position_nudge(x = -.05), pch = '-', size = 5) + 
+	xlab('Test') + ylab('Score')
 
+```
+]
 
 ---
 # High School & Beyond Survey  

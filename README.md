@@ -187,7 +187,7 @@ Homework: 16.4, 17.2, 18.2</p> </td>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> 2024-03-18 </td>
    <td style="text-align:left;"> 2024-03-24 </td>
-   <td style="text-align:left;"> Inference for Numerical Data </td>
+   <td style="text-align:left;"> <a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/2024-03-19-Inference_for_Numerical_Data.pdf'>Inference for Numerical Data</a> </td>
    <td style="text-align:left;"> <p>IMStat Chapters <a href="https://openintro-ims.netlify.app/inference-one-mean">19</a>, <a href="https://openintro-ims.netlify.app/inference-two-means">20</a>, and <a href="https://openintro-ims.netlify.app/inference-paired-means">21</a></p> </td>
    <td style="text-align:left;"> <p><a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/19_inference_for_numerical_data.zip">Inference for Numerical Data Lab</a></p> </td>
   </tr>
