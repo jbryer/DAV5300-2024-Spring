@@ -195,7 +195,7 @@ Homework: 16.4, 17.2, 18.2</p> </td>
    <td style="text-align:right;"> 11 </td>
    <td style="text-align:left;"> 2024-03-25 </td>
    <td style="text-align:left;"> 2024-03-31 </td>
-   <td style="text-align:left;"> Classification and Regression Trees </td>
+   <td style="text-align:left;"> <a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/CART-Methods.pdf'>Classification and Regression Trees</a> </td>
    <td style="text-align:left;"> <p>IMStat <a href="https://openintro-ims.netlify.app/inference-many-means">Chapter 22</a></p> </td>
    <td style="text-align:left;"> <p><a href="https://github.com/jbryer/DAV5300-2024-Spring/raw/master/labs/22_ANOVA.zip">ANOVA Lab</a></p> </td>
   </tr>
