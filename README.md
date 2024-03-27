@@ -203,7 +203,7 @@ Homework: 16.4, 17.2, 18.2</p> </td>
    <td style="text-align:right;"> 12 </td>
    <td style="text-align:left;"> 2024-04-01 </td>
    <td style="text-align:left;"> 2024-04-07 </td>
-   <td style="text-align:left;"> Project Conferences (no in-person class) </td>
+   <td style="text-align:left;"> <a href='https://github.com/jbryer/DAV5300-2024-Spring/blob/master/slides/CART-Methods.pdf'>Project Conferences (no in-person class)</a> </td>
    <td style="text-align:left;"> <p><a href="https://docs.google.com/spreadsheets/d/1mMAHx0Lr-t0VgXxn5-ex_fZOgf0Di_IkKfHRZw8mttc/edit?usp=sharing">Click here to sign-up</a><br />
 Zoom link: <a href="https://zoom.us/my/jbryer">https://zoom.us/my/jbryer</a></p> </td>
    <td style="text-align:left;">  </td>
